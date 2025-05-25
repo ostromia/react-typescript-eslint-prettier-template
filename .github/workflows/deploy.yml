@@ -17,17 +17,21 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
 
-            - name: Read .env and compare
+            - name: validate PUBLIC_BASE_PATH
               id: check
               run: |
                   REPO_NAME=$(basename "$GITHUB_REPOSITORY")
                   BASE_PUBLIC_PATH=$(grep BASE_PUBLIC_PATH .env | cut -d '=' -f2 | tr -d '"' | sed 's|^/||;s|/$||')
 
-                  if [ "$REPO_NAME" = "$BASE_PUBLIC_PATH" ]; then
-                    echo "run_deploy=true" >> "$GITHUB_OUTPUT"
-                  else
+                  if [ "$(git rev-list --count HEAD)" -eq 1 ]; then
                     echo "run_deploy=false" >> "$GITHUB_OUTPUT"
+                  elif [ "$REPO_NAME" != "$BASE_PUBLIC_PATH" ]; then
+                    exit 1
+                  else
+                    echo "run_deploy=true" >> "$GITHUB_OUTPUT"
                   fi
 
     deploy:
