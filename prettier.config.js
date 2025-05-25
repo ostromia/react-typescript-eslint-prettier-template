@@ -14,7 +14,7 @@ const config = {
         "<THIRD_PARTY_MODULES>",
         "^[./]"
     ],
-    importOrderSeparation: true
+    importOrderSeparation: false
 };
 
 export default config;
