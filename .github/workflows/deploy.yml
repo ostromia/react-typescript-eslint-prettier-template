@@ -9,8 +9,30 @@ on:
             - main
 
 jobs:
+    check-env:
+        if: github.repository != 'ostromia/react-typescript-eslint-prettier-template'
+        runs-on: ubuntu-latest
+        outputs:
+            run_deploy: ${{ steps.check.outputs.run_deploy }}
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Read .env and compare
+              id: check
+              run: |
+                  REPO_NAME=$(basename "$GITHUB_REPOSITORY")
+                  BASE_PUBLIC_PATH=$(grep BASE_PUBLIC_PATH .env | cut -d '=' -f2 | tr -d '"' | sed 's|^/||;s|/$||')
+
+                  if [ "$REPO_NAME" = "$BASE_PUBLIC_PATH" ]; then
+                    echo "run_deploy=true" >> "$GITHUB_OUTPUT"
+                  else
+                    echo "run_deploy=false" >> "$GITHUB_OUTPUT"
+                  fi
+
     deploy:
-        if: github.repository != "ostromia/react-typescript-eslint-prettier-template"
+        needs: check-env
+        if: needs.check-env.outputs.run_deploy == 'true'
         runs-on: ubuntu-latest
 
         steps:
