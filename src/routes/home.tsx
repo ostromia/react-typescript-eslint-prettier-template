@@ -3,8 +3,8 @@ import { useState } from "react";
 import reactRouterLogo from "../assets/react-router.svg";
 import reactLogo from "../assets/react.svg";
 import viteLogo from "../assets/vite.svg";
+import "../styles/home.css";
 import type { Route } from "./+types/home";
-import "./home.css";
 
 export function meta({}: Route.MetaArgs) {
     return [
