@@ -10,7 +10,7 @@ on:
 
 jobs:
     check-env:
-        if: github.repository != 'ostromia/react-typescript-eslint-prettier-template'
+        if: github.repository != 'ostromia/reglup'
         runs-on: ubuntu-latest
         outputs:
             run_deploy: ${{ steps.check.outputs.run_deploy }}
