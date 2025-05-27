@@ -6,6 +6,8 @@
 
 - [Motivation](#motivation)
 - [Features](#features)
+- [Getting Started](#getting-started)
+    - [GitHub Pages](#github-pages)
 - [Why React?](#why-react)
 
 ## Motivation
@@ -37,6 +39,19 @@ Don't worry as Reglup isn't a framework or library, just some scaffolding around
 
     - Static Site Generation and File-Based Routing enabled by default.
     - Automatic deployment to GitHub Pages.
+
+## Getting Started
+
+### GitHub Pages
+
+1. Use this template to create a new repository.
+2. Set the `BASE_PUBLIC_PATH` variable in the `.env` file to the name of your repository.
+    - e.g., If your repository is `ostromia/reglup` your `.env` file should contain `BASE_PUBLIC_PATH="/reglup/"`.
+3. Commit this change and push it to your repository.
+4. Go back to your repository on GitHub and select `Settings` and then `Pages`.
+5. Ensure `Source` is set to `Deploy from a branch` and `Branch` is set to `build`.
+6. Your website should now be live to view at `<username>.github.io/<repository name>`.
+    - e.g., If you repository is `ostromia/reglup`, you can view your website at `https://ostromia.github.io/reglup`.
 
 ## Why React?
 
