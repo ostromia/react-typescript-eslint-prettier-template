@@ -1,87 +1,46 @@
-# Welcome to React Router!
+# ReGluP
 
-A modern, production-ready template for building full-stack React applications using React Router.
+**A minimal yet customisable template for building statically generated React projects.**
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Contents
+
+- [Motivation](#motivation)
+- [Features](#features)
+- [Why React?](#why-react)
+
+## Motivation
+
+Whether it's trying to configure an entire framework just to be able to find an alternative to [react-static](https://github.com/react-static/react-static), or wondering why the React 19 announcement blog recommends [react-helmet](https://github.com/nfl/react-helmet), a library that hasn't been updated in over half a decade, trying to configure a project in React can be somewhat irritating.
+
+Reglup aims to provide the most user friendly starting point when creating statically generated React projects.
+
+Don't worry as Reglup isn't a framework or library, just some scaffolding around `npm create vite@latest`, so it's pretty easy to customise any other tools or libraries you need into your project.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- Minimum scaffolding provided to allow easy customisation:
 
-## Getting Started
+    - Reglup depends only on React, React Router, and TypeScript.
+    - ESLint and Prettier are included as industry standards but can be easily removed.
 
-### Installation
+- Built using only the current stable release of software:
 
-Install the dependencies:
+    - Reglup is built using React 19, React Router 7, and TypeScript 5.
+    - No need to worry about deprecated software.
 
-```bash
-npm install
-```
+- Standardised config files:
 
-### Development
+    - All config files are formatted with a default `.config.js` or `.config.ts`.
+    - _(This will hopefully be just `.config.ts` soon with the release of Node 23.6.0.)_
+    - No need to worry about the several possible formats (`.prettierrc`, `.prettierrc.yaml`, `.prettierrc.cts` etc.) tools use for configuration.
 
-Start the development server with HMR:
+- Native GitHub Pages support:
 
-```bash
-npm run dev
-```
+    - Static Site Generation and File-Based Routing enabled by default.
+    - Automatic deployment to GitHub Pages.
 
-Your application will be available at `http://localhost:5173`.
+## Why React?
 
-## Building for Production
+As enjoyable as using [Svelte](https://svelte.dev) is for web development, chances are [you're going to end up using React](https://survey.stackoverflow.co/2024/technology#1-web-frameworks-and-technologies).
 
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+Instead of jumping straight into the deep end and end up wasting several hours of your time trying to configure user authentication into a full stack React application, like I have, building statically generated React apps is a good starting point for learning the fundamentals of React.
