@@ -1,0 +1,25 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+
+    "extensions.ignoreRecommendations": true,
+
+    "cSpell.language": "en-GB",
+    "cSpell.languageSettings": [
+        {
+            "languageId": "*",
+            "enabled": false
+        },
+        {
+            "languageId": "markdown",
+            "enabled": true
+        }
+    ],
+
+    "markdownlint.config": {
+        "MD007": {
+            "indent": 4
+        }
+    }
+}
