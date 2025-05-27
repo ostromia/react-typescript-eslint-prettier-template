@@ -46,7 +46,7 @@ Don't worry as Reglup isn't a framework or library, just some scaffolding around
 
 1. Use this template to create a new repository.
 2. Set the `BASE_PUBLIC_PATH` variable in the `.env` file to the name of your repository.
-    - e.g., If your repository is `ostromia/reglup` your `.env` file should contain `BASE_PUBLIC_PATH="/reglup/"`.
+    - e.g., If your repository is `ostromia/reglup` your `.env` file should contain `BASE_PUBLIC_PATH="reglup"`.
 3. Commit this change and push it to your repository.
 4. Go back to your repository on GitHub and select `Settings` and then `Pages`.
 5. Ensure `Source` is set to `Deploy from a branch` and `Branch` is set to `build`.
