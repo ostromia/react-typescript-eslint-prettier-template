@@ -28,11 +28,10 @@ Don't worry as Reglup isn't a framework or library, just some scaffolding around
     - Reglup is built using React 19, React Router 7, and TypeScript 5.
     - No need to worry about deprecated software.
 
-- Standardised config files:
+- Standardised configuration files:
 
-    - All config files are formatted with a default `.config.js` or `.config.ts`.
-    - _(This will hopefully be just `.config.ts` soon with the release of Node 23.6.0.)_
-    - No need to worry about the several possible formats (`.prettierrc`, `.prettierrc.yaml`, `.prettierrc.cts` etc.) tools use for configuration.
+    - All configuration files use the `.config.ts` format as default.
+    - No need to worry about the several possible formats (`.prettierrc`, `.prettierrc.yaml`, `.prettierrc.cts` etc.) tools use.
 
 - Native GitHub Pages support:
 
