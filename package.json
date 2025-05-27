@@ -7,6 +7,7 @@
         "dev": "react-router dev",
         "build": "react-router build",
         "preview": "react-router-serve ./build/server/index.js",
+        "deploy": "node .reglup/deploy.ts",
         "lint": "eslint .",
         "format": "prettier --write .",
         "typecheck": "react-router typegen && tsc"
@@ -28,6 +29,7 @@
         "@types/react": "^19.1.5",
         "@types/react-dom": "^19.1.2",
         "@vitejs/plugin-react": "^4.4.1",
+        "dotenv": "^16.5.0",
         "eslint": "^9.25.0",
         "eslint-plugin-react-hooks": "^5.2.0",
         "eslint-plugin-react-refresh": "^0.4.19",
