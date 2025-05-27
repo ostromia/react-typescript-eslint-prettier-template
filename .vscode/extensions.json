@@ -1,0 +1,23 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "davidanson.vscode-markdownlint",
+        "bierner.markdown-preview-github-styles",
+        "streetsidesoftware.code-spell-checker"
+    ],
+
+    "unwantedRecommendations": [
+        "ms-azuretools.vscode-docker",
+        "firefox-devtools.vscode-firefox-debug",
+        "ms-edgedevtools.vscode-edge-devtools",
+        "github.copilot",
+        "christian-kohler.npm-intellisense",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "GitHub.vscode-github-actions",
+        "dotjoshjohnson.xml",
+        "ms-python.python",
+        "github.vscode-pull-request-github"
+    ]
+}
