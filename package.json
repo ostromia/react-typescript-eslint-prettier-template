@@ -6,9 +6,8 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",
-        "build:static": "node .reglup/build.ts",
-        "preview": "vite preview",
         "deploy": "node .reglup/deploy.ts",
+        "preview": "vite preview",
         "lint": "eslint .",
         "format": "prettier --write .",
         "typecheck": "react-router typegen && tsc"
