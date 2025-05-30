@@ -7,18 +7,16 @@ function run(command: string) {
     execSync(command, { stdio: "inherit" });
 }
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const root = dirname(__dirname);
+const __root = dirname(dirname(fileURLToPath(import.meta.url)));
 
 run("npm run build");
 run("npx vite build --ssr src/entry-server.tsx --outDir dist/server");
 
-const { render } = await import(resolve(root, "dist/server/entry-server.js"));
+const { render } = await import(resolve(__root, "dist/server/entry-server.js"));
 
-const template = readFileSync(resolve("dist/index.html"), "utf-8");
-const { html: html } = render();
-const final = template.replace(`<!--app-html-->`, html);
+let index = readFileSync(resolve("dist/index.html"), "utf-8");
+index = index.replace(`<!--app-html-->`, render().html);
 
-rmSync(resolve(root, "dist/server"), { recursive: true, force: true });
+rmSync(resolve(__root, "dist/server"), { recursive: true, force: true });
 
-writeFileSync(resolve(root, "dist/index.html"), final);
+writeFileSync(resolve(__root, "dist/index.html"), index);
